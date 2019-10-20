@@ -1,0 +1,10 @@
+div{
+    text-align: center;
+    background: grey;
+    color: white;
+    border-radius: 1px;
+    padding: 4px;
+    position: relative;
+    top: 5%;
+}
+    
