@@ -1,5 +1,5 @@
 <?php
-    require_once('action_connection.php');
+    include '../action/action_connection.php';
     $id = $_GET['id'];
 
     $query = $connection->prepare("SELECT * FROM product WHERE id_product = ?");
@@ -13,7 +13,7 @@
     <div >
        <h1> Editar Produto </h1>
         <div >
-            <form method="POST" action="action_updateProduct.php?id=<?=$id?>" enctype="multipart/form-data">
+            <form method="POST" action="../action/action_updateProduct.php?id=<?=$id?>" enctype="multipart/form-data">
                 <div>
                     <label for="text">Produto:</label>
                     <input type="text" name="nome_produto" value="<?php echo $name_product?>">

@@ -1,5 +1,5 @@
 <?php
-    require_once('action_connection.php');
+    include '../action/action_connection.php';
     $id = $_GET['id'];
 
     $query = $connection->prepare("SELECT * FROM client WHERE id_user = ?");
@@ -16,7 +16,7 @@
     <div >
        <h1> Editar Cliente </h1>
         <div >
-            <form method="POST" action="action_updateUsers.php?id=<?=$id?>" enctype="multipart/form-data">
+            <form method="POST" action="../action/action_updateUsers.php?id=<?=$id?>" enctype="multipart/form-data">
                 <div>
                     <label for="text">Nome do Usuário:</label>
                     <input type="text" name="nome_usuario" value="<?php echo $name_user?>">
