@@ -1,5 +1,8 @@
 <?php
     include '../action/action_connection.php';
+    if($_SESSION['logado'] != true){
+        header("Location: ../forms/form_login.php");
+    }
     $id = $_GET['id'];
 
     $query = $connection->prepare("SELECT * FROM client WHERE id_user = ?");

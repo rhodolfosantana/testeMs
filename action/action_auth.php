@@ -12,11 +12,12 @@
     
 	if ($checking->rowCount() >= 1){
 		$dados = $checking->fetch();
+		$_SESSION['logado'] = true;
 
-        
-        session_start();
-		$_SESSION['id']  = $dados['id'];
-		$_SESSION['user'] = $login; 
+
+		
+		
+		 
 		header("Location: ../index.php");
 	} else {
 		header("Location: ../forms/form_login.php");

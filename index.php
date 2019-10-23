@@ -1,4 +1,11 @@
-
+<?php 
+if($_SESSION['logado'] == true){
+    header("Location: forms/form_login.php");
+    var_dump($_SESSION['logado']);
+		exit();
+}
+            
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +26,7 @@
                     $stmt = $connection->prepare($sql);
                     $result = $stmt->execute();
                     $colors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
                 ?>
                 <table border="1px">
                     <tr>

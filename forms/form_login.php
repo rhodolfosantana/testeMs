@@ -23,6 +23,8 @@
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-default">Entrar!</button>
+                        <button><a href="form_client.php">Cadastrar</a></button>
+
                     </div>
                 </div>
             </form>

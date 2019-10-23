@@ -1,6 +1,9 @@
 
 <?php
     include  "../action/action_connection.php";
+    if($_SESSION['logado'] != true){
+        header("Location: ../forms/form_login.php");
+    }
 ?>
 <html>
     <head></head>
