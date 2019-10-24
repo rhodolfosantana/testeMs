@@ -15,12 +15,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2">Idade:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="age" placeholder="Idade">
-                    </div>
-                </div>
-                <div class="form-group">
                     <label class="control-label col-sm-2">Senha:</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" name="senha" placeholder="Senha">

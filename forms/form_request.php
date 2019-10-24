@@ -1,6 +1,6 @@
 <?php
     include '../action/action_connection.php';
-    if($_SESSION['logado'] == true){
+    if($_SESSION['logado'] == false){
         header("Location: ../forms/form_login.php");
     }   
     $id = $_GET['id'];
@@ -11,19 +11,19 @@
 
     $dados = $query->fetch();
     $name_product = $dados['name_product'];
+
 ?>
 <center>
     <div >
-       <h1> Editar Produto </h1>
+       <h1>Confirma pedido </h1>
         <div >
-            <form method="POST" action="../action/action_updateProduct.php?id=<?=$id?>" enctype="multipart/form-data">
+            <form method="POST" action="../action/action_addRequest.php?id=<?=$id?>" enctype="multipart/form-data">
                 <div>
                     <label for="text">Produto:</label>
                     <input type="text" name="nome_produto" value="<?php echo $name_product?>">
                 </div>
                 <div>    
-                   <input type="submit" value="Salvar" >
-                    <button><a href="index.php">Voltar</a></button>
+                   <input type="submit" value="Eu quero!" >
                 </div>
             </form>
         </div>

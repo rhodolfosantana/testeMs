@@ -22,8 +22,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Entrar!</button>
-                        <button><a href="form_client.php">Cadastrar</a></button>
+                        <button type="submit" class="btn btn-default">Entrar</button>
+                        <button><a href="form_client.php" style="text-decoration:none; color:inherit">Cadastrar</a></button>
 
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 <?php 
  	require "action_connection.php";
- 	if(isset($_POST['nome_usuario']) && isset($_POST['age']) && isset($_POST['senha'])){
+ 	if(isset($_POST['nome_usuario']) && isset($_POST['senha'])){
 		
 		$nome = $_POST['nome_usuario'];
-		$age = $_POST['age'];
-		$pass = $_POST['senha'];
+		$pass = sha1($_POST['senha']);
+		
 
 		
 		$checking=("SELECT * FROM client WHERE name = ?");
@@ -18,11 +18,10 @@
 
 		} else{
  		
- 			$sql = "INSERT INTO client (name, age, password) 
-						VALUES( :nome, :age, :pass)";
+ 			$sql = "INSERT INTO client (name, password) 
+						VALUES( :nome, :pass)";
 	 		$query = $connection->prepare($sql);
  			$query->bindParam(':nome', $nome);
-			$query->bindParam(':age', $age);
 			$query->bindParam(':pass', $pass);
  			$stmt = $query->execute();
 			header('Location: ../index.php');

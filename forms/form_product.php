@@ -1,10 +1,3 @@
-
-<?php
-    include  "../action/action_connection.php";
-    if($_SESSION['logado'] != true){
-        header("Location: ../forms/form_login.php");
-    }
-?>
 <html>
     <head></head>
     <body>
@@ -14,11 +7,19 @@
             <form method="POST" class="form-horizontal" action="../action/action_addProduct.php" enctype="multipart/form-data">
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2" >Nome:</label>
+                    <label class="control-label col-sm-2" >Nome do Produtos:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="nome_produto" placeholder="Nome">
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" >Valor:</label>
+                    <div class="col-sm-10">
+                        <input type="tex" class="form-control" name="valor_produto" placeholder="valor">
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label class="control-label col-sm-2" >Imagem:</label>
                     <div class="col-sm-10">
